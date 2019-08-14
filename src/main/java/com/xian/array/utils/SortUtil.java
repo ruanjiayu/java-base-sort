@@ -153,27 +153,27 @@ public class SortUtil {
         System.out.println("-----------冒泡排序-----------");
         int[] bubbleArr = {2,3,5,1,23,6,78,34};
         selectSort(bubbleArr);
-        Arrays.toString(bubbleArr);
+        System.out.println(Arrays.toString(bubbleArr));
         System.out.println();
         System.out.println("-----------快速排序-----------");
         int[] quickArr = {2,3,5,1,23,6,78,34};
         quickSort(quickArr, 0, quickArr.length -1 );
-        Arrays.toString(quickArr);
+        System.out.println(Arrays.toString(quickArr));
         System.out.println();
         System.out.println("-----------选择排序-----------");
         int[] selectArr = {2,3,5,1,23,6,78,34};
         selectSort(selectArr);
-        Arrays.toString(selectArr);
+        System.out.println(Arrays.toString(selectArr));
         System.out.println();
         System.out.println("---------插入排序-------------");
         int[] insertArr = {2,3,5,1,23,6,78,34};
         insertSort(insertArr);
-        Arrays.toString(insertArr);
+        System.out.println(Arrays.toString(insertArr));
         System.out.println();
         System.out.println("-------shell排序");
         int[] shellArr = {2,3,5,1,23,6,78,34};
         shellSort(shellArr);
-        Arrays.toString(shellArr);
+        System.out.println(Arrays.toString(shellArr));
     }
 }
 
