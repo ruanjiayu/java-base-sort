@@ -1,5 +1,7 @@
 package com.xian.array.utils;
 
+import java.util.Arrays;
+
 /**
  * @Description
  * @Author ruanjiayu
@@ -118,6 +120,24 @@ public class SortUtil {
     }
 
     /**
+     * 希尔排序
+     *
+     * @param arr
+     */
+    public static void shellSort(int[] arr){
+        // d 表示增量7 3 1
+        for(int d = arr.length / 2; d > 0; d /= 2) {
+            for(int i = d; i < arr.length; ++i) {
+                for(int j = i - d ; j >= 0; j -= d) {
+                    if(arr[j] > arr [j + d]) {
+                        swap(j, j +d , arr);
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * 交换数组内的值
      * @param a
      * @param b
@@ -133,30 +153,27 @@ public class SortUtil {
         System.out.println("-----------冒泡排序-----------");
         int[] bubbleArr = {2,3,5,1,23,6,78,34};
         selectSort(bubbleArr);
-        for(int i : bubbleArr){
-            System.out.print(i + " ");
-        }
+        Arrays.toString(bubbleArr);
         System.out.println();
         System.out.println("-----------快速排序-----------");
         int[] quickArr = {2,3,5,1,23,6,78,34};
         quickSort(quickArr, 0, quickArr.length -1 );
-        for(int i : quickArr){
-            System.out.print(i + " ");
-        }
+        Arrays.toString(quickArr);
         System.out.println();
         System.out.println("-----------选择排序-----------");
         int[] selectArr = {2,3,5,1,23,6,78,34};
         selectSort(selectArr);
-        for(int i : selectArr){
-            System.out.print(i + " ");
-        }
+        Arrays.toString(selectArr);
         System.out.println();
         System.out.println("---------插入排序-------------");
         int[] insertArr = {2,3,5,1,23,6,78,34};
         insertSort(insertArr);
-        for(int i : insertArr){
-            System.out.print(i + " ");
-        }
+        Arrays.toString(insertArr);
+        System.out.println();
+        System.out.println("-------shell排序");
+        int[] shellArr = {2,3,5,1,23,6,78,34};
+        shellSort(shellArr);
+        Arrays.toString(shellArr);
     }
 }
 
