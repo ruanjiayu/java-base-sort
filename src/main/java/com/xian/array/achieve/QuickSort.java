@@ -26,7 +26,7 @@ public class QuickSort {
      */
     public static void quickSort(int[] arr,int low,int high){
         int i, j, temp;
-        if (low > high) {
+        if (low >= high) {
             return;
         }
         i = low;
