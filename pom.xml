@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xian</groupId>
-    <artifactId>array</artifactId>
+    <artifactId>java-base-sort</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>array</name>
     <description>Demo project for Spring Boot</description>
